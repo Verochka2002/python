@@ -1,0 +1,21 @@
+from random import randint
+import math
+m= int(input("Введите число:"))
+t=m*1-1
+s=0
+while(t%2==0):
+    t=t/2
+    s=s+1
+r=int(math.log(m,2))
+for i in range(r):
+    a = randint(2, m-2)
+    print(a)
+    x=(a**t)%m
+    if (x==1) or (x==m-1):
+        for j in range(s-1):
+            x = (x**2)%m
+            if (x==1):
+                print("Число составное.")
+            if (x==m-1):
+                r=r+1
+            print("Число составное.")  
