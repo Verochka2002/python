@@ -1,0 +1,26 @@
+from random import randint
+import decimal
+import math
+decimal.getcontext().prec=100
+m= int(input("Введите число:"))
+t=m*1-1
+s=0
+while(t%2==0):
+    t=t/2
+    s=s+1
+r=int(math.log(m,2))
+for i in range(r):
+    a = randint(2, m-2)
+    print(a)
+    def pi():
+        x=((decimal.Decimal(a)**decimal.Decimal(t))%decimal.Decimal(m))
+        return x
+    if (x==1) or (x==m-1):
+        for j in range(s-1):
+            x = (x**2)%m
+            if (x==1):
+                print("Число составное.")
+        
+            if (x==m-1):
+                r=r+1
+            print("Число составное."
